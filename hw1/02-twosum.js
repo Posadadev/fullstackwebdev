@@ -22,3 +22,20 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 
 **/
+
+const nums = [1, 2, 3, 4, 5];
+const target = 7;
+const output = [];
+
+for (let i = 0; i < nums.length; i++) {
+  for (let j = i + 1; j < nums.length; j++) {
+    if (nums[i] + nums[j] === target) {
+      output.push(i, j);
+      break;
+    }
+  }
+  if (output.length > 0) break;
+}
+
+if (output.length === 0) console.log("No 2 indices add to target");
+else console.log(output);
