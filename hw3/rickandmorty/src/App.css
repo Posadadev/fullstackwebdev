@@ -1,0 +1,93 @@
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+  background-color: #20232a;
+  color: white;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #97ce4c;
+}
+
+/* Page layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.error {
+  color: #c62828;
+}
+
+/* Character and information cards */
+.character-grid,
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.character-card,
+.info-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.character-card img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.card-content,
+.info-card {
+  padding: 20px;
+}
+
+.card-content h3,
+.info-card h2 {
+  margin-top: 0;
+}
+
+.info-card ul {
+  padding-left: 20px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* Keep the navigation usable on smaller screens. */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+}
